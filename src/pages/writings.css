@@ -1,0 +1,96 @@
+.writings {
+  display: flex;
+  flex-direction: column;
+}
+
+.writings__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.writings__grid > * {
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.writings__grid > *:nth-child(2n) {
+  border-right: 0;
+}
+
+@media (max-width: 720px) {
+  .writings__grid {
+    grid-template-columns: 1fr;
+  }
+  .writings__grid > * {
+    border-right: 0;
+  }
+}
+
+/* ---------------- Writing card ---------------- */
+
+.writing {
+  padding: 32px var(--gutter);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg);
+  transition: background 0.35s ease;
+}
+
+.writing:hover {
+  background: var(--bg-soft);
+}
+
+.writing__media {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule-soft);
+}
+
+.writing__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.writing__title {
+  font-family: var(--display);
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.writing__link {
+  color: var(--ink);
+  background-image: linear-gradient(var(--ink), var(--ink));
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  transition: color 0.3s ease, background-size 0.4s ease,
+    background-image 0.3s ease;
+}
+
+.writing:hover .writing__link {
+  color: var(--accent);
+  background-image: linear-gradient(var(--accent), var(--accent));
+}
+
+.writing__blurb {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.writing__date {
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .writing {
+    padding: 24px var(--gutter-sm);
+  }
+}
