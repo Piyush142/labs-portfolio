@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
+import Logo from './Logo'
 
 const NAV = [
   { to: '/', label: 'Projects', end: true },
@@ -10,9 +11,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__inner">
-        <Link to="/" className="wordmark" aria-label="2469 Labs home">
-          <span className="wordmark__num">2469</span>
-          <span className="wordmark__word">Labs</span>
+        <Link to="/" className="logo-link" aria-label="2469 Labs home">
+          <Logo className="logo" />
         </Link>
         <nav className="nav" aria-label="Footer">
           {NAV.map((item) => (

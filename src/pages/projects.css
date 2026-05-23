@@ -67,6 +67,7 @@
   .projects__grid {
     grid-template-columns: 1fr;
   }
+
   .projects__grid > * {
     border-right: 0;
   }
@@ -75,15 +76,19 @@
 /* ---------------- Card ---------------- */
 
 .card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: inherit;
+  height: 100%;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  flex: 1;
   background: var(--bg-elev);
   transition: background 0.4s ease;
+  height: 100%;
 }
 
 .card-link:hover .card,
@@ -114,6 +119,25 @@
   z-index: 1;
 }
 
+.card__media--image::before {
+  display: none;
+}
+
+.card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.card-link:hover .card__image,
+.card:hover .card__image {
+  transform: scale(1.03);
+}
+
 .card__monogram {
   font-family: var(--display);
   font-weight: 500;
@@ -139,6 +163,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  flex: 1;
 }
 
 .card__title {
@@ -192,7 +217,8 @@
 }
 
 .card__meta {
-  margin-top: 8px;
+  margin-top: auto;
+  padding-top: 8px;
   font-size: 12.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;

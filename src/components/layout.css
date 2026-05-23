@@ -24,25 +24,16 @@
   display: contents;
 }
 
-.wordmark {
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: -0.005em;
-  color: var(--ink);
+.logo-link {
   display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-  line-height: 1;
+  align-items: center;
+  line-height: 0;
 }
 
-.wordmark__num {
-  font-feature-settings: 'tnum' on;
-  color: var(--accent);
-}
-
-.wordmark__word {
-  color: var(--ink);
+.logo {
+  display: block;
+  height: 28px;
+  width: auto;
 }
 
 .nav {

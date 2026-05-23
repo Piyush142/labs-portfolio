@@ -4,13 +4,25 @@ export default function ProjectCard({ project }: { project: Project }) {
   const body = (
     <article className="card" data-reveal>
       <div
-        className="card__media"
-        style={{ background: project.swatch }}
-        aria-hidden="true"
+        className={
+          project.image ? 'card__media card__media--image' : 'card__media'
+        }
+        style={project.image ? undefined : { background: project.swatch }}
+        aria-hidden={project.image ? undefined : true}
       >
-        <span className="card__monogram" aria-hidden="true">
-          {project.monogram}
-        </span>
+        {project.image ? (
+          <img
+            src={project.image}
+            alt=""
+            className="card__image"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <span className="card__monogram" aria-hidden="true">
+            {project.monogram}
+          </span>
+        )}
       </div>
       <div className="card__body">
         <h3 className="card__title">

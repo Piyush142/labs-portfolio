@@ -2,6 +2,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 import gsap from 'gsap'
+import Logo from './Logo'
 
 const NAV = [
   { to: '/', label: 'Projects', end: true },
@@ -30,9 +31,8 @@ export default function Header() {
   return (
     <header ref={ref} className="header">
       <div className="header__inner">
-        <Link to="/" className="wordmark" aria-label="2469 Labs home">
-          <span className="wordmark__num">2469</span>
-          <span className="wordmark__word">Labs</span>
+        <Link to="/" className="logo-link" aria-label="2469 Labs home">
+          <Logo className="logo" />
         </Link>
         <nav className="nav" aria-label="Primary">
           {NAV.map((item) => (
