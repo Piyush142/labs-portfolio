@@ -19,7 +19,13 @@ export default function Footer() {
         <nav className="nav" aria-label="Footer">
           {NAV.map((item) =>
             'href' in item ? (
-              <a key={item.href} href={item.href} className="nav__link">
+              <a
+                key={item.href}
+                href={item.href}
+                className="nav__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {item.label}
               </a>
             ) : (
