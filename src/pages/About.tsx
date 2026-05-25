@@ -15,7 +15,7 @@ export default function About() {
         <p className="about__eyebrow">2469 Labs</p>
         <HeadlineReveal
           className="about__title"
-          text="We're Rohit Singhal and Piyush Chouhan, the engineers and occasional designers behind a small studio called 2469 Labs."
+          text="We're Rohit Singhal and Piyush Chouhan, the engineers and designers behind 2469 Labs."
         />
 
         <div className="about__lede">
@@ -27,16 +27,19 @@ export default function About() {
             feeling like a hobby and started looking suspiciously like a career.
           </p>
           <p data-reveal>
-            We work with a small number of companies at a time — usually one
-            longer engagement and a handful of smaller pieces. With code as our
-            medium, our projects tend to start with a real problem and end with
-            a tool the team actually opens on Monday morning. We've built CRMs
-            for jewellery houses, learning environments for kids, AI products
-            for general humans, and a number of things in the in-between.
+            We work with a small number of companies at a time - usually one
+            longer engagement, what we call a marathon, and a handful of 
+            smaller pieces, what we call sprints.
           </p>
           <p data-reveal>
-            Why "2469"? It started as a small joke about a number that kept
-            showing up in our lives. We're not entirely telling.
+            With code as our medium, our projects tend to start with a real 
+            problem and end with a tool the team actually opens on Monday morning. 
+            We've built CRMs for jewellery houses, learning environments for kids, 
+            AI products for general humans, and a number of things in the in-between.
+          </p>
+          <p data-reveal>
+            Why “2469”? Officially, it was our flat number in Gurgaon: C-2469. 
+            Unofficially, “42069 Labs” felt slightly too honest.
           </p>
         </div>
       </article>
@@ -78,33 +81,31 @@ export default function About() {
         <div className="founders__grid">
           <article className="founder" data-reveal>
             <h3 className="founder__name">Rohit Singhal</h3>
-            <p className="founder__role">Design &amp; engineering. Mostly the front of things.</p>
+            <p className="founder__role">Design &amp; engineering. A wannabe benevolent dictator.</p>
             <p className="founder__bio">
               For money and fun, I do software design and engineering. I keep a
-              list of passion projects too long to ever finish — Reader-1 (a
-              cyberdeck e-reader on a Raspberry Pi), BabyARC, AiTone, and
-              whatever I started last Tuesday. I treat the world as a museum of
-              passion projects, after John Collison, and I'm trying to leave a
-              few behind.
+              list of passion projects too long to ever finish: e-readers, silly games, and
+              whatever I started last Tuesday. I believe the world is a museum of
+              passion projects, and I'm trying to leave a few behind.
             </p>
             <ul className="founder__links">
               <li>
-                <a className="link" href="#">
-                  Portfolio
+                <a className="link" href="mailto:rsinghal757@gmail.com">
+                  Email
                 </a>
               </li>
               <li>
-                <a className="link" href="#">
+                <a className="link" href="https://github.com/rsinghal757/">
                   GitHub
                 </a>
               </li>
               <li>
-                <a className="link" href="#">
+                <a className="link" href="https://x.com/0xRohitSinghal">
                   Twitter
                 </a>
               </li>
               <li>
-                <a className="link" href="#">
+                <a className="link" href="https://www.linkedin.com/in/rsinghal757">
                   LinkedIn
                 </a>
               </li>
@@ -113,13 +114,12 @@ export default function About() {
 
           <article className="founder" data-reveal>
             <h3 className="founder__name">Piyush Chouhan</h3>
-            <p className="founder__role">Full-stack engineering. ML, Web3, and a soft spot for Rust.</p>
+            <p className="founder__role">Full-stack engineering. A wannabe malicious dictator.</p>
             <p className="founder__bio">
               I'm a full-stack developer with a long-standing curiosity about
-              machine learning and a more recent one about Web3. Currently
-              learning Rust because someone said the borrow checker would make
-              me a better person. I like building things that work, breaking
-              them on purpose, and writing down what I learn.
+              machine learning and a more recent one about Web3. Have a soft spot for Rust 
+              because someone said the borrow checker would make me a better person. 
+              I like building things that work, breaking them on purpose, and writing down what I learn.
             </p>
             <ul className="founder__links">
               <li>
@@ -133,7 +133,12 @@ export default function About() {
                 </a>
               </li>
               <li>
-                <a className="link" href="#">
+                <a className="link" href="https://x.com/chouhanpiyush14">
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a className="link" href="https://www.linkedin.com/in/piyush-chouhan-041050130/">
                   LinkedIn
                 </a>
               </li>
