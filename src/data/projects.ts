@@ -7,7 +7,7 @@ export type Project = {
   year: string
   href?: string
   caseStudy?: string
-  image?: string
+  imageBase?: string
   swatch: string
 }
 
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description:
       'Custom inventory + sales OS for 64Facets, a luxury jewellery brand. Replaces spreadsheets, ad-hoc photos, and a lot of WhatsApp with one source of truth.',
     year: '2023 — ongoing',
-    image: '/64facets.png',
+    imageBase: '/projects/64facets',
     swatch: '#b6884d',
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
       'For interior designers, architects, and home stagers who want to explore more, present better, and win more projects without redrawing the same room twelve times.',
     year: '2024',
     href: 'https://sofascript.com',
-    image: '/sofascript.png',
+    imageBase: '/projects/sofascript',
     swatch: '#c4b5a0',
   },
   {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
       'A learn-by-doing environment for K–12 students. They write a little code, something happens on screen, the AI tutor nudges them when they get stuck. Repeat until curious.',
     year: '2024',
     href: 'https://getpebble.in',
-    image: '/pebble.png',
+    imageBase: '/projects/pebble',
     swatch: '#5a7fb3',
   },
   {
@@ -60,7 +60,7 @@ export const projects: Project[] = [
       'A unified home for AI personas — coding, research, creativity, the daily-help kind. Persistent memory, real-time conversations, and the ability to make assistants that feel like yours.',
     year: '2024',
     href: 'https://helloai.in',
-    image: '/helloai.png',
+    imageBase: '/projects/helloai',
     swatch: '#9a6bb0',
   },
 ]

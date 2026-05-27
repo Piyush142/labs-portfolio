@@ -1,9 +1,5 @@
 import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { RefObject } from 'react'
-
-gsap.registerPlugin(ScrollTrigger)
 
 type RevealOptions = {
   selector?: string
@@ -39,25 +35,44 @@ export function useReveal<T extends HTMLElement>(
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       if (reduce) return
 
-      const targets = gsap.utils.toArray<HTMLElement>(selector)
-      if (!targets.length) return
+      const root = ref.current
+      if (!root) return
+      const nodes = Array.from(root.querySelectorAll<HTMLElement>(selector))
+      if (!nodes.length) return
 
-      gsap.set(targets, { y, opacity: 0 })
+      let cancelled = false
 
-      targets.forEach((el, i) => {
-        gsap.to(el, {
-          y: 0,
-          opacity: 1,
-          duration,
-          delay: delay + i * stagger,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: el,
-            start,
-            toggleActions: once ? 'play none none none' : 'play none none reverse',
-          },
+      ;(async () => {
+        const [gsapModule, stModule] = await Promise.all([
+          import('gsap'),
+          import('gsap/ScrollTrigger'),
+        ])
+        if (cancelled) return
+        const gsap = gsapModule.default
+        const ScrollTrigger = stModule.ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger)
+
+        gsap.set(nodes, { y, opacity: 0 })
+
+        nodes.forEach((el, i) => {
+          gsap.to(el, {
+            y: 0,
+            opacity: 1,
+            duration,
+            delay: delay + i * stagger,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start,
+              toggleActions: once ? 'play none none none' : 'play none none reverse',
+            },
+          })
         })
-      })
+      })()
+
+      return () => {
+        cancelled = true
+      }
     },
     { scope: ref, dependencies: [] },
   )

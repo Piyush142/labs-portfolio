@@ -1,18 +1,23 @@
 import type { Project } from '../data/projects'
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const img600 = project.imageBase ? `${project.imageBase}-600.jpg` : undefined
+  const img1200 = project.imageBase ? `${project.imageBase}-1200.jpg` : undefined
+
   const body = (
     <article className="card" data-reveal>
       <div
         className={
-          project.image ? 'card__media card__media--image' : 'card__media'
+          project.imageBase ? 'card__media card__media--image' : 'card__media'
         }
-        style={project.image ? undefined : { background: project.swatch }}
-        aria-hidden={project.image ? undefined : true}
+        style={project.imageBase ? undefined : { background: project.swatch }}
+        aria-hidden={project.imageBase ? undefined : true}
       >
-        {project.image ? (
+        {project.imageBase && img600 && img1200 ? (
           <img
-            src={project.image}
+            src={img1200}
+            srcSet={`${img600} 600w, ${img1200} 1200w`}
+            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 44vw, 520px"
             alt=""
             className="card__image"
             loading="lazy"
