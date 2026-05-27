@@ -42,7 +42,7 @@ export const milestones: Array<{ year: string; entries: string[] }> = [
     entries: ['Founded 2469 Labs as a formal studio of two.'],
   },
   {
-    year: '2024',
+    year: '2024-25',
     entries: [
       'Launched SofaScript, Pebble, and HelloAI as in-house products.',
       'Quiet expansion into AI-augmented client work.',
