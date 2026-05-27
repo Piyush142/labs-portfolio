@@ -7,7 +7,7 @@ export const selectedClients: Array<{ name: string; note: string; year: string }
   {
     name: 'SofaScript',
     note: 'Photo-to-concept tool for interior designers',
-    year: '2024',
+    year: '2025 - ongoing',
   },
   {
     name: 'Pebble',
@@ -24,7 +24,7 @@ export const selectedClients: Array<{ name: string; note: string; year: string }
 export const whatWeBuild: Array<{ title: string; body: string }> = [
   {
     title: 'Client work',
-    body: 'Custom software for teams who want a tool, not a platform — usually internal CRMs, design systems, and AI-augmented workflows. We build the thing you would have built if you also wrote code for a living.',
+    body: 'Custom software for teams who want a tool, not a platform - usually internal CRMs, design systems, and AI-augmented workflows. We build the thing you would have built if you also wrote code for a living.',
   },
   {
     title: 'In-house products',
@@ -32,7 +32,7 @@ export const whatWeBuild: Array<{ title: string; body: string }> = [
   },
   {
     title: 'Quiet research',
-    body: "We keep a few experiments running in the background — things that don't have customers yet but might. Reader-1, BabyARC, AiTone. The world is a museum of passion projects, and we're trying to fill a small wing of it.",
+    body: "We keep a few experiments running in the background - things that don't have customers yet but might. Reader-1, BabyARC, AiTone. The world is a museum of passion projects, and we're trying to fill a small wing of it.",
   },
 ]
 
