@@ -15,7 +15,7 @@ export default function Projects() {
         <p className="lede__eyebrow">A two-person studio building software since 2016.</p>
         <HeadlineReveal
           className="lede__title"
-          text="We make products on purpose — for clients we like, and for ourselves when nobody's asking."
+          text="We make products on purpose - for clients we like, and for ourselves when nobody's asking."
         />
         <p className="lede__sub" data-reveal>
           Below: things we've built and shipped. Some pay the rent, some don't,
