@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <div ref={ref} className="projects">
       <header className="lede">
-        <p className="lede__eyebrow">A two-person studio building software since 2016.</p>
+        <p className="lede__eyebrow">A small studio building software since 2016.</p>
         <HeadlineReveal
           className="lede__title"
           text="We make products on purpose - for clients we like, and for ourselves when nobody's asking."
