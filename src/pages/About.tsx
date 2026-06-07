@@ -1,13 +1,13 @@
-import { useRef } from "react";
-import CatalogList from "../components/CatalogList";
-import HeadlineReveal from "../components/HeadlineReveal";
-import { selectedClients, whatWeBuild, milestones } from "../data/about";
-import { useReveal } from "../hooks/useReveal";
-import "./about.css";
+import { useRef } from 'react'
+import CatalogList from '../components/CatalogList'
+import HeadlineReveal from '../components/HeadlineReveal'
+import { selectedClients, whatWeBuild, milestones } from '../data/about'
+import { useReveal } from '../hooks/useReveal'
+import './about.css'
 
 export default function About() {
-  const ref = useRef<HTMLDivElement>(null);
-  useReveal(ref, { stagger: 0.07 });
+  const ref = useRef<HTMLDivElement>(null)
+  useReveal(ref, { stagger: 0.07 })
 
   return (
     <div ref={ref} className="about">
@@ -28,18 +28,17 @@ export default function About() {
           </p>
           <p data-reveal>
             We work with a small number of companies at a time - usually one
-            longer engagement, what we call a marathon, and a handful of smaller
-            pieces, what we call sprints.
+            longer engagement, what we call a marathon, and a handful of 
+            smaller pieces, what we call sprints.
           </p>
           <p data-reveal>
-            With code as our medium, our projects tend to start with a real
-            problem and end with a tool the team actually opens on Monday
-            morning. We've built CRMs for jewellery houses, learning
-            environments for kids, AI products for general humans, and a number
-            of things in the in-between.
+            With code as our medium, our projects tend to start with a real 
+            problem and end with a tool the team actually opens on Monday morning. 
+            We've built CRMs for jewellery houses, learning environments for kids, 
+            AI products for general humans, and a number of things in the in-between.
           </p>
           <p data-reveal>
-            Why “2469”? Officially, it was our flat number in Gurgaon: C-2469.
+            Why “2469”? Officially, it was our flat number in Gurgaon: C-2469. 
             Unofficially, “42069 Labs” felt slightly too honest.
           </p>
         </div>
@@ -70,27 +69,24 @@ export default function About() {
         title="Timeline"
         rows={milestones.flatMap((m) =>
           m.entries.map((entry, i) => ({
-            primary: i === 0 ? m.year : "",
+            primary: i === 0 ? m.year : '',
             secondary: entry,
           })),
         )}
       />
 
       <section className="founders" data-reveal>
-        <h2 className="catalog__title">Team</h2>
+        <h2 className="catalog__title">Founders</h2>
 
         <div className="founders__grid">
           <article className="founder" data-reveal>
             <h3 className="founder__name">Rohit Singhal</h3>
-            <p className="founder__role">
-              Design &amp; engineering. A wannabe benevolent dictator.
-            </p>
+            <p className="founder__role">Design &amp; engineering. A wannabe benevolent dictator.</p>
             <p className="founder__bio">
               For money and fun, I do software design and engineering. I keep a
-              list of passion projects too long to ever finish: e-readers, silly
-              games, and whatever I started last Tuesday. I believe the world is
-              a museum of passion projects, and I'm trying to leave a few
-              behind.
+              list of passion projects too long to ever finish: e-readers, silly games, and
+              whatever I started last Tuesday. I believe the world is a museum of
+              passion projects, and I'm trying to leave a few behind.
             </p>
             <ul className="founder__links">
               <li>
@@ -109,10 +105,7 @@ export default function About() {
                 </a>
               </li>
               <li>
-                <a
-                  className="link"
-                  href="https://www.linkedin.com/in/rsinghal757"
-                >
+                <a className="link" href="https://www.linkedin.com/in/rsinghal757">
                   LinkedIn
                 </a>
               </li>
@@ -121,15 +114,12 @@ export default function About() {
 
           <article className="founder" data-reveal>
             <h3 className="founder__name">Piyush Chouhan</h3>
-            <p className="founder__role">
-              Full-stack engineering. A wannabe malicious dictator.
-            </p>
+            <p className="founder__role">Full-stack engineering. A wannabe malicious dictator.</p>
             <p className="founder__bio">
               I'm a full-stack developer with a long-standing curiosity about
-              machine learning and a more recent one about Web3. Have a soft
-              spot for Rust because someone said the borrow checker would make
-              me a better person. I like building things that work, breaking
-              them on purpose, and writing down what I learn.
+              machine learning and a more recent one about Web3. Have a soft spot for Rust 
+              because someone said the borrow checker would make me a better person. 
+              I like building things that work, breaking them on purpose, and writing down what I learn.
             </p>
             <ul className="founder__links">
               <li>
@@ -148,50 +138,7 @@ export default function About() {
                 </a>
               </li>
               <li>
-                <a
-                  className="link"
-                  href="https://www.linkedin.com/in/piyush-chouhan-041050130/"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </article>
-
-          <article className="founder" data-reveal>
-            <h3 className="founder__name">Kartik Agarwal</h3>
-            <p className="founder__role">
-              Full-stack engineering. Software developer and systems learner.
-            </p>
-            <p className="founder__bio">
-              I'm a full-stack developer from India, currently sharpening my
-              DSA, system design, and MERN stack muscles. Most of my projects
-              orbit practical web tools: React visualizers for sorting and
-              pathfinding, exam platforms, real-time calling apps, and the kind
-              of experiments that make the next hard thing feel slightly less
-              mysterious.
-            </p>
-            <ul className="founder__links">
-              <li>
-                <a className="link" href="mailto:kartikagarwal698@gmail.com">
-                  Email
-                </a>
-              </li>
-              <li>
-                <a className="link" href="https://github.com/kartik298">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a className="link" href="https://x.com/KARTIK06r9">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  className="link"
-                  href="https://www.linkedin.com/in/kartik-agarwal-sde/"
-                >
+                <a className="link" href="https://www.linkedin.com/in/piyush-chouhan-041050130/">
                   LinkedIn
                 </a>
               </li>
@@ -202,9 +149,9 @@ export default function About() {
 
       <section className="about__close" data-reveal>
         <p>
-          We've spoken at undergrad hackathons, written long emails to people we
-          admire, and occasionally been paid to do what we'd be doing anyway.
-          But most of the time, we're just a small team working on computers.
+          We've spoken at undergrad hackathons, written long emails to people
+          we admire, and occasionally been paid to do what we'd be doing anyway.
+          But most of the time, we're just two guys working on computers.
         </p>
         <p className="about__close-cta">
           <a href="mailto:hello@2469labs.com" className="link link--accent">
@@ -213,5 +160,5 @@ export default function About() {
         </p>
       </section>
     </div>
-  );
+  )
 }

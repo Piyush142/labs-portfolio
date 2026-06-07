@@ -46,7 +46,7 @@ export default function Footer() {
       <div className="footer__line">
         <span>© {new Date().getFullYear()} 2469 Labs.</span>
         <span>
-          Made by a small team that likes making things.{' '}
+          Made by two guys who like making things.{' '}
           <a href="mailto:hello@2469labs.com" className="link">
             Say hello.
           </a>
