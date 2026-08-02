@@ -16,8 +16,13 @@ export const selectedClients: Array<{ name: string; note: string; year: string }
   },
   {
     name: 'HelloAI',
-    note: 'Unified home for AI assistants and personas',
+    note: 'Unified home for AI assistants and persons',
     year: '2024',
+  },
+  {
+    name: 'GizzMail',
+    note: 'AI-native email workspace with connected app integrations',
+    year: '2026 — ongoing',
   },
 ]
 
@@ -36,28 +41,31 @@ export const whatWeBuild: Array<{ title: string; body: string }> = [
   },
 ]
 
-export const milestones: Array<{ year: string; entries: string[] }> = [
+export const milestones: Array<{ year: string; items: string[] }> = [
   {
     year: '2026',
-    entries: ['Founded 2469 Labs as a formal studio of two.'],
+    items: [
+      'Founded 2469 Labs as a formal studio of two.',
+      'Launched GizzMail — an AI-native email workspace with connected app integrations.',
+    ],
   },
   {
     year: '2024',
-    entries: [
+    items: [
       'Launched SofaScript, Pebble, and HelloAI as in-house products.',
       'Quiet expansion into AI-augmented client work.',
     ],
   },
   {
     year: '2023',
-    entries: ['Began long-form engagement with 64Facets on their custom CRM.'],
+    items: ['Began long-form engagement with 64Facets on their custom CRM.'],
   },
   {
     year: '2020',
-    entries: ['Graduated from IIT Roorkee, B.Tech Industrial Engineering.'],
+    items: ['Graduated from IIT Roorkee, B.Tech Industrial Engineering.'],
   },
   {
     year: '2016',
-    entries: ['Met in an undergrad dorm, started building things together.'],
+    items: ['Met in an undergrad dorm, started building things together.'],
   },
 ]
